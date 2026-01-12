@@ -2,12 +2,5 @@ project:
   type: docusaurus
   output-dir: ../docs/examples
 
-extensions:
-  - quarto-colab
-  
 format:
-  docusaurus-md:
-    colab:
-      gh-user: "emma-uw"
-      gh-repo: "emma-uw.github.io"  
-      gh-branch: "main" 
+  docusaurus-md: default
