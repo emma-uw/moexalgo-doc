@@ -141,14 +141,14 @@ const config: Config = {
       },
       languageTabs: [
       {
-        highlight: "bash",
-        language: "curl",
-        logoClass: "curl",
-      },
-      {
         highlight: "python",
         language: "python",
         logoClass: "python",
+      },
+      {
+        highlight: "bash",
+        language: "curl",
+        logoClass: "curl",
       },
       {
         highlight: "javascript",
