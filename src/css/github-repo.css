@@ -151,11 +151,11 @@
   }
 }
 
-@media (max-width: 996px) {
+@media screen and (max-width: 996px) {
   .github-repo {
     padding: 2px 4px;
   }
-  .md-source__facts { 
-    display: none !important; 
+  .md-source__facts {
+    display: none !important;
   }
 }
