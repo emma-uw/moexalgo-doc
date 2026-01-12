@@ -17,19 +17,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: yarn
+          cache: npm
       
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
       
       - name: Clean API docs
-        run: yarn docusaurus clean-api-docs algopack
+        run: npx docusaurus clean-api-docs algopack
       
       - name: Generate API docs
-        run: yarn docusaurus gen-api-docs algopack
+        run: npx docusaurus gen-api-docs algopack
       
       - name: Build website
-        run: yarn build
+        run: npm run build
       
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
