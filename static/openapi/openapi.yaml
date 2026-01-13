@@ -59,9 +59,7 @@ paths:
         Блоки данных:
           * securities - торговые параметры акций (наименование, шаг цены, лотность, ...)
           * marketdata - торговая статистика по акциям (цены, объемы, ...)
-        
-        Пример: https://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities.json
-        
+                
         [Описание метрик](/docs/description/realtime#marketstatistics) 
       responses:
         '200':
@@ -308,9 +306,7 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time                          |
         | NOT AUTHORIZED   | iss    | 15 мин. задержанные данные         |
-
-        Пример: https://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities/sber.json
-        
+      
         [Описание метрик](/docs/description/realtime#marketstatistics) 
       responses:
         '200':
@@ -546,8 +542,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time стакан                   |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities/sber/orderbook.json
-
         [Описание метрик](/docs/description/realtime#orderbook)
       responses:
         '200':
@@ -652,11 +646,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time сделки                   |
         | NOT AUTHORIZED   | iss    | 15 мин. задержанные данные         |
-
-        Пример: https://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities/sber/trades.json?tradeno=10131515201
-        
-        Если не указывать ticker, сделки пойдут по всем акциям:
-        https://iss.moex.com/iss/engines/stock/markets/shares/boards/tqbr/securities/trades.json?tradeno=10131515201
 
         [Описание метрик](/docs/description/realtime#trades)
       responses:
@@ -811,9 +800,7 @@ paths:
         Блоки данных:
           * securities - торговые параметры фьючерсов (наименование, шаг цены, лотность, ...)
           * marketdata - торговая статистика по фьючерсам (цены, объемы, ...)
-        
-        Пример: https://iss.moex.com/iss/engines/futures/markets/forts/boards/rfud/securities.json
-        
+                
         [Описание метрик](/docs/description/realtime#marketstatistics-1) 
       responses:
         '200':
@@ -933,8 +920,6 @@ paths:
         Блоки данных:
           * securities - торговые параметры фьючерсов (наименование, шаг цены, лотность, ...)
           * marketdata - торговая статистика по фьючерсам (цены, объемы, ...)
-
-        Пример: https://iss.moex.com/iss/engines/futures/markets/forts/boards/rfud/securities/SiH5.json
 
         [Описание метрик](/docs/description/realtime#marketstatistics-1)
       responses:
@@ -1325,8 +1310,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time свечи                    |
         | NOT AUTHORIZED   | iss    | 15 мин. задержанные данные         |
 
-        Пример: https://iss.moex.com/iss/engines/futures/markets/forts/boards/rfud/securities/SiH5/candles.json
-
         [Описание метрик](/docs/description/realtime#candles-1)
       responses:
         '200':
@@ -1387,9 +1370,7 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time стакан                   |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/engines/futures/markets/forts/boards/rfud/securities/SiH5/orderbook.json
-        
+       
         [Описание метрик](/docs/description/realtime#orderbook-1)
       responses:
         '200':
@@ -1495,9 +1476,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time сделки                   |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/engines/futures/markets/forts/boards/rfud/securities/SiH5/trades.json
-
-
         [Описание метрик](/docs/description/realtime#trades-1)
       responses:
         '200':
@@ -1553,10 +1531,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/tradestats.json?date=2024-04-17
-        
-        Получить последнюю пятиминутку: https://iss.moex.com/iss/datashop/algopack/eq/tradestats.json?date=2024-04-17&latest=1
 
         [Описание метрик](/docs/description/supercandles#tradestats) | [Методология расчета](/docs/method/supercandles#tradestats) 
       responses:
@@ -1702,8 +1676,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/tradestats/ABIO.json?from=2024-04-17&till=2024-04-19
 
         [Описание метрик](/docs/description/supercandles#tradestats) | [Методология расчета](/docs/method/supercandles#tradestats) 
       responses:
@@ -1881,8 +1853,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/obstats.json?date=2024-04-17
-
         [Описание метрик](/docs/description/supercandles#obstats) | [Методология расчета](/docs/method/supercandles#obstats) 
       responses:
         '200':
@@ -2016,8 +1986,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/obstats/ABIO.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#obstats) | [Методология расчета](/docs/method/supercandles#obstats) 
       responses:
         '200':
@@ -2137,8 +2105,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/orderstats.json?date=2024-04-17
 
         [Описание метрик](/docs/description/supercandles#orderstats) | [Методология расчета](/docs/method/supercandles#orderstats) 
       responses:
@@ -2283,8 +2249,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/orderstats/ABIO.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#orderstats) | [Методология расчета](/docs/method/supercandles#orderstats) 
       responses:
         '200':
@@ -2415,8 +2379,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/fo/tradestats.json?date=2024-04-17
 
         [Описание метрик](/docs/description/supercandles#tradestats-1) | [Методология расчета](/docs/method/supercandles#tradestats)
       responses:
@@ -2572,8 +2534,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fo/tradestats/RIM4.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#tradestats-1) | [Методология расчета](/docs/method/supercandles#tradestats)
       responses:
         '200':
@@ -2717,8 +2677,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/fo/obstats.json?date=2024-04-17
 
         [Описание метрик](/docs/description/supercandles#obstats-1) | [Методология расчета](/docs/method/supercandles#obstats)
       responses:
@@ -2881,8 +2839,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fo/obstats/RIM4.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#obstats-1) | [Методология расчета](/docs/method/supercandles#obstats)
       responses:
         '200':
@@ -3032,8 +2988,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fx/tradestats.json?date=2024-04-17
-
         [Описание метрик](/docs/description/supercandles#tradestats-2) | [Методология расчета](/docs/method/supercandles#tradestats)
       responses:
         '200':
@@ -3179,8 +3133,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fx/tradestats/usd000utstom.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#tradestats-2) | [Методология расчета](/docs/method/supercandles#tradestats)
       responses:
         '200':
@@ -3312,8 +3264,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/fx/obstats.json?date=2024-04-17
 
         [Описание метрик](/docs/description/supercandles#obstats-2) | [Методология расчета](/docs/method/supercandles#obstats)
       responses:
@@ -3466,8 +3416,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fx/obstats/usd000utstom.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#obstats-2) | [Методология расчета](/docs/method/supercandles#obstats)
       responses:
         '200':
@@ -3606,8 +3554,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fx/orderstats.json?date=2024-04-17
-
         [Описание метрик](/docs/description/supercandles#orderstats-1) | [Методология расчета](/docs/method/supercandles#orderstats)
       responses:
         '200':
@@ -3739,8 +3685,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
 
-        Пример: https://iss.moex.com/iss/datashop/algopack/fx/orderstats/usd000utstom.json?from=2024-04-17&till=2024-04-19
-
         [Описание метрик](/docs/description/supercandles#orderstats-1) | [Методология расчета](/docs/method/supercandles#orderstats)
       responses:
         '200':
@@ -3862,10 +3806,6 @@ paths:
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Данные задержаны на 15 дней |
 
-        Пример: https://iss.moex.com/iss/analyticalproducts/futoi/securities.json?date=2024-04-17
-        
-        Получить последнюю пятиминутку: https://iss.moex.com/iss/analyticalproducts/futoi/securities.json?date=2024-04-17&latest=1
-
         [Описание метрик](/docs/description/futoi) | [Методология расчета](/docs/method/futoi)
       responses:
         '200':
@@ -3977,8 +3917,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time данные (обновление каждые 5 мин) |
         | NOT AUTHORIZED   | iss    | Данные задержаны на 15 дней |
-
-        Пример: https://iss.moex.com/iss/analyticalproducts/futoi/securities/si.json?from=2024-04-17&till=2024-04-19
 
         [Описание метрик](/docs/description/futoi) | [Методология расчета](/docs/method/futoi)
       responses:
@@ -4189,8 +4127,6 @@ paths:
         | ---------------- | ------ | -----------------------------------|
         | AUTHORIZED       | apim   | Real-time стакан                   |
         | NOT AUTHORIZED   | iss    | Информация доступна только подписчикам |
-
-        Пример: https://iss.moex.com/iss/datashop/algopack/eq/hi2/SBER.json?from=2024-04-01&till=2024-04-17
 
         [Описание метрик](/docs/description/hi2) | [Методология расчета](/docs/method/hi2)
       responses:
